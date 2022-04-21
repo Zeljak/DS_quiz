@@ -1,0 +1,503 @@
+@charset "utf-8";
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+@import "./_utilities";
+
+@import "../node_modules/bulma/bulma";
+
+//GENERAL
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $family-primary;
+}
+
+.section_pitanje {
+  margin-top: 50px;
+
+  @include for-phone {
+    margin-top: 10px;
+  }
+
+  @include for-tablet {
+    margin-top: 25px;
+  }
+
+  &_fototekst {
+    display: flex;
+  }
+}
+
+/* Flex columns */
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+
+.flex-columns {
+  background-color: white;
+
+  @include for-phone {
+    margin-top: 0px;
+    // background-color: #3de6d9;
+  }
+}
+.flex-columns .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+
+  @include for-phone {
+    flex-direction: column;
+  }
+}
+
+.flex-columns .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 0;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%;
+}
+
+.flex-columns img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  // @include for-phone {
+  //   width: 95%;
+  // }
+}
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+  background-color: white;
+
+  @include for-phone {
+    padding: 0;
+    // background-color: #3de6d9;
+  }
+}
+
+.flex-columns h2 {
+  font-size: 25px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: 3.25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 65px;
+  background-color: black;
+  padding: 10px;
+
+  @include for-phone {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 2.08px;
+    margin-bottom: 20px;
+    text-align: center;
+    // background-color: #3de6d9;
+  }
+
+  @include for-tablet {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 2.08px;
+    margin-bottom: 20px;
+  }
+}
+.flex-columns h4 {
+  margin-bottom: 10px;
+}
+.flex-columns p {
+  margin: 20px 0;
+}
+
+// Radio
+.radio {
+  &__wrapper {
+    color: black;
+    display: grid;
+    font-size: 25px;
+    text-align: left;
+    grid-template-columns: min-content auto;
+    grid-gap: 35px;
+    background-color: #fafafa;
+    cursor: pointer;
+    margin-bottom: 40px;
+
+    @include for-tablet {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    @include for-phone {
+      font-size: 16px;
+      margin-bottom: 20px;
+      padding: 10px;
+      // background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__input {
+    display: flex;
+    line-height: 1;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .radio__control {
+        background-color: black;
+        border: none;
+
+        @include for-phone {
+          // background-color: #368e87;
+        }
+      }
+    }
+  }
+
+  &__control {
+    display: block;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: 5px solid black;
+    transform: translateY(0.25em);
+
+    @include for-tablet {
+      width: 20px;
+      height: 20px;
+      border: 3px solid black;
+      transform: translateY(0.3em);
+    }
+
+    @include for-phone {
+      width: 20px;
+      height: 20px;
+      border: 3px solid black;
+      transform: translateY(0);
+    }
+  }
+}
+
+h3,
+p {
+  font-size: 30px;
+  line-height: 1.83;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  @include for-phone {
+    font-size: 16px;
+  }
+
+  @include for-tablet {
+    font-size: 16px;
+  }
+}
+
+h3 {
+  margin-bottom: 50px;
+}
+
+.box-text {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  img {
+    width: 50%;
+
+    @include for-phone {
+      width: 100%;
+    }
+  }
+}
+.centered {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 20px;
+
+  @include for-phone {
+    font-size: 16px;
+  }
+
+  @include for-tablet {
+    font-size: 16px;
+  }
+}
+
+.button--custom {
+  height: 70px;
+  width: 384px;
+  display: block;
+  font-family: $family-primary;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 52px;
+  border: none;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+  color: white;
+  background-color: grey;
+  padding: 0;
+  text-transform: uppercase;
+  margin: 50px auto;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background: white;
+    color: grey;
+  }
+
+  @include for-phone {
+    height: 48px;
+    width: 84%;
+    font-size: 14px;
+  }
+
+  @include for-tablet {
+    font-size: 16px;
+    height: 54px;
+    width: 326px;
+  }
+}
+
+.form__lastpart {
+  margin-top: 100px;
+  background-color: #ccc;
+  padding: 20px;
+
+  @include for-phone {
+    margin-top: 50px;
+  }
+
+  p {
+    text-transform: unset;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 384px;
+    height: 70px;
+
+    @include for-phone {
+      height: 48px;
+      width: 84%;
+    }
+
+    @include for-tablet {
+      width: 326px;
+      height: 54px;
+    }
+
+    &::placeholder {
+      text-align: center;
+    }
+  }
+}
+
+//FOOTER
+footer {
+  background-color: white;
+  margin-bottom: 50px;
+
+  img {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+
+    @include for-phone {
+      width: 40%;
+    }
+  }
+}
+
+// Odgovori
+.odgovorA {
+  img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    @include for-phone {
+      padding-top: 0;
+    }
+  }
+  h1 {
+    font-family: $family-secondary;
+    font-size: 100px;
+    font-weight: 100;
+    line-height: 1;
+    color: black;
+    text-align: right;
+    margin-right: 100px;
+    margin-bottom: 30px;
+
+    @include for-phone {
+      font-size: 40px;
+      line-height: 1.14;
+      margin-right: 10px;
+    }
+
+    @include for-tablet {
+      font-size: 70px;
+      line-height: 1.14;
+      margin-right: 50px;
+    }
+  }
+
+  &__wrapper {
+    width: 1088px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    right: 0;
+    padding: 75px;
+    margin-right: 100px;
+
+    @include for-phone {
+      width: 300px;
+      padding: 10px;
+      margin-right: 10px;
+    }
+
+    @include for-tablet {
+      width: 600px;
+      padding: 10px;
+      margin-right: 50px;
+    }
+
+    @include for-desktop {
+      width: 800px;
+    }
+
+    h2 {
+      font-family: $family-secondary;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.33;
+      text-align: left;
+      color: black;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+
+      @include for-phone {
+        font-size: 16px;
+        line-height: 13px;
+        margin-bottom: 15px;
+      }
+      @include for-tablet {
+        font-size: 16px;
+        line-height: 13px;
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      font-family: $family-primary;
+      font-size: 25px;
+      line-height: 1.4;
+      text-align: left;
+      color: black;
+      text-transform: none;
+
+      @include for-phone {
+        font-size: 16px;
+        line-height: 25px;
+      }
+      @include for-tablet {
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+
+    span {
+      font-family: $family-primary;
+      font-size: 20px;
+      line-height: 2;
+      color: black;
+      font-weight: 100;
+
+      @include for-phone {
+        font-size: 16px;
+        line-height: 25px;
+      }
+      @include for-tablet {
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+
+    hr,
+    .grey {
+      background-color: $azure;
+      height: 0.5px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    .grey {
+      background-color: gray;
+      margin-top: 30px;
+    }
+  }
+
+  .vl {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+
+    @include for-phone {
+      width: 10px;
+    }
+
+    &--pink {
+      border-left: 17px solid #ff4bd1;
+      @include for-phone {
+        border-left: 5px solid #ff4bd1;
+      }
+    }
+    &--beige {
+      border-left: 17px solid #edd68c;
+      @include for-phone {
+        border-left: 5px solid #edd68c;
+      }
+    }
+    &--yellow {
+      border-left: 17px solid #ddf045;
+      @include for-phone {
+        border-left: 5px solid #ddf045;
+      }
+    }
+    &--green {
+      border-left: 17px solid #52d987;
+      @include for-phone {
+        border-left: 5px solid #52d987;
+      }
+    }
+  }
+}
