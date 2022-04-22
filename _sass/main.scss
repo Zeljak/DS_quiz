@@ -14,6 +14,94 @@
   font-family: $family-primary;
 }
 
+.header__text {
+  background-color: #fafafa;
+  line-height: 1.4;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -60px;
+  z-index: 10;
+  border: solid 2px black;
+  -webkit-box-shadow: 0 10px 20px 0 rgb(0 0 0 / 40%);
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 / 40%);
+
+  @include for-phone {
+    margin-top: 0;
+  }
+
+  h1 {
+    font-family: $family-secondary;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    @include for-phone {
+      font-size: 20px;
+    }
+
+    @include for-tablet {
+      font-size: 30px;
+    }
+
+    @include for-desktop {
+      font-size: 30px;
+    }
+
+    @include for-widescreen {
+      font-size: 40px;
+    }
+
+    @include for-fullhd {
+      font-size: 50px;
+    }
+  }
+
+  p {
+    text-align: left;
+    text-transform: unset;
+
+    @include for-phone {
+      font-size: 14px;
+      line-height: 1.2;
+      text-align: center;
+    }
+  }
+
+  @include for-phone {
+    padding: 16px 20px;
+    width: 80%;
+  }
+
+  @include for-tablet {
+    padding: 16px 20px;
+    width: 420px;
+  }
+
+  @include for-desktop {
+    font-size: 18px;
+    margin-bottom: 35px;
+    padding: 16px 63px 20px;
+    width: 700px;
+  }
+
+  @include for-widescreen {
+    font-size: 22px;
+    margin-bottom: 35px;
+    width: 677px;
+  }
+
+  @include for-fullhd {
+    margin-bottom: 0;
+    font-size: 24px;
+    padding: 56px 122px 75px 122px;
+    width: 950px;
+  }
+}
+
+// pitanja
 .section_pitanje {
   margin-top: 50px;
 
@@ -268,7 +356,7 @@ h3 {
 
   &:hover {
     background: white;
-    color: grey;
+    color: rgb(67, 65, 65);
   }
 
   @include for-phone {
@@ -286,7 +374,7 @@ h3 {
 
 .form__lastpart {
   margin-top: 100px;
-  background-color: #ccc;
+  background-color: #fafafa;
   padding: 20px;
 
   @include for-phone {
@@ -302,6 +390,8 @@ h3 {
   input[type="text"] {
     width: 384px;
     height: 70px;
+    -webkit-box-shadow: 0 10px 20px 0 rgb(0 0 0 / 40%);
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 40%);
 
     @include for-phone {
       height: 48px;
@@ -316,6 +406,15 @@ h3 {
     &::placeholder {
       text-align: center;
     }
+  }
+}
+
+a {
+  font-weight: bold;
+  color: black;
+
+  &:hover {
+    background-color: yellow;
   }
 }
 
@@ -336,14 +435,17 @@ footer {
 }
 
 // Odgovori
-.odgovorA {
-  img {
-    display: block;
-    margin: 0 auto;
-    padding-top: 50px;
+.odgovor {
+  .row {
+    width: 100%;
 
-    @include for-phone {
-      padding-top: 0;
+    p {
+      text-transform: unset;
+      margin: 0;
+
+      @include for-phone {
+        padding: 10px;
+      }
     }
   }
   h1 {
@@ -400,7 +502,7 @@ footer {
       line-height: 1.33;
       text-align: left;
       color: black;
-      text-transform: uppercase;
+
       margin-bottom: 30px;
 
       @include for-phone {
@@ -421,7 +523,7 @@ footer {
       line-height: 1.4;
       text-align: left;
       color: black;
-      text-transform: none;
+      text-transform: unset;
 
       @include for-phone {
         font-size: 16px;

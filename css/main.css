@@ -11458,10 +11458,107 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-family: "Quicksand", sans-serif;
 }
 
+.header__text {
+  background-color: #fafafa;
+  line-height: 1.4;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -60px;
+  z-index: 10;
+  border: solid 2px black;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  .header__text {
+    margin-top: 0;
+  }
+}
+.header__text h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .header__text h1 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  .header__text h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1025px) {
+  .header__text h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1216px) {
+  .header__text h1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1408px) {
+  .header__text h1 {
+    font-size: 50px;
+  }
+}
+.header__text p {
+  text-align: left;
+  text-transform: unset;
+}
+@media (max-width: 768px) {
+  .header__text p {
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .header__text {
+    padding: 16px 20px;
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  .header__text {
+    padding: 16px 20px;
+    width: 420px;
+  }
+}
+@media (min-width: 1025px) {
+  .header__text {
+    font-size: 18px;
+    margin-bottom: 35px;
+    padding: 16px 63px 20px;
+    width: 700px;
+  }
+}
+@media (min-width: 1216px) {
+  .header__text {
+    font-size: 22px;
+    margin-bottom: 35px;
+    width: 677px;
+  }
+}
+@media (min-width: 1408px) {
+  .header__text {
+    margin-bottom: 0;
+    font-size: 24px;
+    padding: 56px 122px 75px 122px;
+    width: 950px;
+  }
+}
+
 .section_pitanje {
   margin-top: 50px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .section_pitanje {
     margin-top: 10px;
   }
@@ -11488,7 +11585,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .flex-columns {
   background-color: white;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .flex-columns {
     margin-top: 0px;
   }
@@ -11508,7 +11605,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   margin: 0 auto;
   background-color: white;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .flex-columns .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -11562,7 +11659,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 30px;
   background-color: white;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .flex-columns .column-2 {
     padding: 0;
   }
@@ -11580,7 +11677,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: black;
   padding: 10px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .flex-columns h2 {
     font-size: 16px;
     line-height: 20px;
@@ -11627,7 +11724,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .radio__wrapper {
     font-size: 16px;
     margin-bottom: 20px;
@@ -11667,7 +11764,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
             transform: translateY(0.3em);
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .radio__control {
     width: 20px;
     height: 20px;
@@ -11684,7 +11781,7 @@ p {
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   h3,
 p {
     font-size: 16px;
@@ -11709,7 +11806,7 @@ h3 {
 .box-text img {
   width: 50%;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .box-text img {
     width: 100%;
   }
@@ -11724,7 +11821,7 @@ h3 {
   font-weight: bold;
   font-size: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .centered {
     font-size: 16px;
   }
@@ -11757,9 +11854,9 @@ h3 {
 }
 .button--custom:hover {
   background: white;
-  color: grey;
+  color: #434141;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .button--custom {
     height: 48px;
     width: 84%;
@@ -11776,10 +11873,10 @@ h3 {
 
 .form__lastpart {
   margin-top: 100px;
-  background-color: #ccc;
+  background-color: #fafafa;
   padding: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .form__lastpart {
     margin-top: 50px;
   }
@@ -11792,8 +11889,10 @@ h3 {
 .form__lastpart input[type=text] {
   width: 384px;
   height: 70px;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .form__lastpart input[type=text] {
     height: 48px;
     width: 84%;
@@ -11821,6 +11920,14 @@ h3 {
   text-align: center;
 }
 
+a {
+  font-weight: bold;
+  color: black;
+}
+a:hover {
+  background-color: yellow;
+}
+
 footer {
   background-color: white;
   margin-bottom: 50px;
@@ -11830,23 +11937,25 @@ footer img {
   display: block;
   margin: 0 auto;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer img {
     width: 40%;
   }
 }
 
-.odgovorA img {
-  display: block;
-  margin: 0 auto;
-  padding-top: 50px;
+.odgovor .row {
+  width: 100%;
 }
-@media (max-width: 767px) {
-  .odgovorA img {
-    padding-top: 0;
+.odgovor .row p {
+  text-transform: unset;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .odgovor .row p {
+    padding: 10px;
   }
 }
-.odgovorA h1 {
+.odgovor h1 {
   font-family: "Roboto", sans-serif;
   font-size: 100px;
   font-weight: 100;
@@ -11856,21 +11965,21 @@ footer img {
   margin-right: 100px;
   margin-bottom: 30px;
 }
-@media (max-width: 767px) {
-  .odgovorA h1 {
+@media (max-width: 768px) {
+  .odgovor h1 {
     font-size: 40px;
     line-height: 1.14;
     margin-right: 10px;
   }
 }
 @media (min-width: 768px) and (max-width: 1025px) {
-  .odgovorA h1 {
+  .odgovor h1 {
     font-size: 70px;
     line-height: 1.14;
     margin-right: 50px;
   }
 }
-.odgovorA__wrapper {
+.odgovor__wrapper {
   width: 1088px;
   background-color: rgba(255, 255, 255, 0.7);
   position: absolute;
@@ -11878,140 +11987,139 @@ footer img {
   padding: 75px;
   margin-right: 100px;
 }
-@media (max-width: 767px) {
-  .odgovorA__wrapper {
+@media (max-width: 768px) {
+  .odgovor__wrapper {
     width: 300px;
     padding: 10px;
     margin-right: 10px;
   }
 }
 @media (min-width: 768px) and (max-width: 1025px) {
-  .odgovorA__wrapper {
+  .odgovor__wrapper {
     width: 600px;
     padding: 10px;
     margin-right: 50px;
   }
 }
 @media (min-width: 1025px) {
-  .odgovorA__wrapper {
+  .odgovor__wrapper {
     width: 800px;
   }
 }
-.odgovorA__wrapper h2 {
+.odgovor__wrapper h2 {
   font-family: "Roboto", sans-serif;
   font-size: 30px;
   font-weight: bold;
   line-height: 1.33;
   text-align: left;
   color: black;
-  text-transform: uppercase;
   margin-bottom: 30px;
 }
-@media (max-width: 767px) {
-  .odgovorA__wrapper h2 {
+@media (max-width: 768px) {
+  .odgovor__wrapper h2 {
     font-size: 16px;
     line-height: 13px;
     margin-bottom: 15px;
   }
 }
 @media (min-width: 768px) and (max-width: 1025px) {
-  .odgovorA__wrapper h2 {
+  .odgovor__wrapper h2 {
     font-size: 16px;
     line-height: 13px;
     margin-bottom: 15px;
   }
 }
-.odgovorA__wrapper p {
+.odgovor__wrapper p {
   font-family: "Quicksand", sans-serif;
   font-size: 25px;
   line-height: 1.4;
   text-align: left;
   color: black;
-  text-transform: none;
+  text-transform: unset;
 }
-@media (max-width: 767px) {
-  .odgovorA__wrapper p {
+@media (max-width: 768px) {
+  .odgovor__wrapper p {
     font-size: 16px;
     line-height: 25px;
   }
 }
 @media (min-width: 768px) and (max-width: 1025px) {
-  .odgovorA__wrapper p {
+  .odgovor__wrapper p {
     font-size: 16px;
     line-height: 25px;
   }
 }
-.odgovorA__wrapper span {
+.odgovor__wrapper span {
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
   line-height: 2;
   color: black;
   font-weight: 100;
 }
-@media (max-width: 767px) {
-  .odgovorA__wrapper span {
+@media (max-width: 768px) {
+  .odgovor__wrapper span {
     font-size: 16px;
     line-height: 25px;
   }
 }
 @media (min-width: 768px) and (max-width: 1025px) {
-  .odgovorA__wrapper span {
+  .odgovor__wrapper span {
     font-size: 16px;
     line-height: 25px;
   }
 }
-.odgovorA__wrapper hr,
-.odgovorA__wrapper .grey {
+.odgovor__wrapper hr,
+.odgovor__wrapper .grey {
   background-color: #17b3e7;
   height: 0.5px;
   width: 100%;
   margin: 0 auto;
   margin-bottom: 30px;
 }
-.odgovorA__wrapper .grey {
+.odgovor__wrapper .grey {
   background-color: gray;
   margin-top: 30px;
 }
-.odgovorA .vl {
+.odgovor .vl {
   height: 100%;
   position: absolute;
   right: 0;
   z-index: 10;
 }
-@media (max-width: 767px) {
-  .odgovorA .vl {
+@media (max-width: 768px) {
+  .odgovor .vl {
     width: 10px;
   }
 }
-.odgovorA .vl--pink {
+.odgovor .vl--pink {
   border-left: 17px solid #ff4bd1;
 }
-@media (max-width: 767px) {
-  .odgovorA .vl--pink {
+@media (max-width: 768px) {
+  .odgovor .vl--pink {
     border-left: 5px solid #ff4bd1;
   }
 }
-.odgovorA .vl--beige {
+.odgovor .vl--beige {
   border-left: 17px solid #edd68c;
 }
-@media (max-width: 767px) {
-  .odgovorA .vl--beige {
+@media (max-width: 768px) {
+  .odgovor .vl--beige {
     border-left: 5px solid #edd68c;
   }
 }
-.odgovorA .vl--yellow {
+.odgovor .vl--yellow {
   border-left: 17px solid #ddf045;
 }
-@media (max-width: 767px) {
-  .odgovorA .vl--yellow {
+@media (max-width: 768px) {
+  .odgovor .vl--yellow {
     border-left: 5px solid #ddf045;
   }
 }
-.odgovorA .vl--green {
+.odgovor .vl--green {
   border-left: 17px solid #52d987;
 }
-@media (max-width: 767px) {
-  .odgovorA .vl--green {
+@media (max-width: 768px) {
+  .odgovor .vl--green {
     border-left: 5px solid #52d987;
   }
 }
