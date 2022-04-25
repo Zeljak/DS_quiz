@@ -14,6 +14,13 @@
   font-family: $family-primary;
 }
 
+.header__photo {
+  @include for-ultrahd {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .header__text {
   background-color: #fafafa;
   line-height: 1.4;

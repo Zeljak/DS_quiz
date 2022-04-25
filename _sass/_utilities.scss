@@ -59,7 +59,7 @@
   }
 }
 @mixin for-ultrahd {
-  @media (min-width: 2500px) {
+  @media (min-width: 1900px) {
     @content;
   }
 }

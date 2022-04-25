@@ -11458,6 +11458,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-family: "Quicksand", sans-serif;
 }
 
+@media (min-width: 1900px) {
+  .header__photo {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .header__text {
   background-color: #fafafa;
   line-height: 1.4;
