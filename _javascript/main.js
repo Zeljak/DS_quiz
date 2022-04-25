@@ -108,31 +108,11 @@ if (document.querySelector('#submit-form')) {
             body: $('form#kviz').serializeJSON()
           })
             // .then(document.querySelector('.loading-indicator-moda').classList.add('is-hidden'))
-            .then(document.querySelector('.error__message_ime').classList.add('is-hidden'))
-            .then(otvoriRezultate());
+            .then(document.querySelector('.error__message_ime').classList.add('is-hidden'));
+            // .then(otvoriRezultate());
 
           // open result page
-          // setTimeout(function() {
-          //   switch (izbor) {
-          //     case 'brojAodg':
-          //       window.open("http://localhost:8848/odgovorA.html","_self")
-          //       break;
-          //     case 'brojBodg':
-          //       window.open("http://localhost:8848/odgovorB.html","_self")
-          //       break;
-          //     case 'brojCodg':
-          //       window.open("http://localhost:8848/odgovorC.html","_self")
-          //       break;
-          //     case 'brojDodg':
-          //       window.open("http://localhost:8848/odgovorD.html","_self")
-          //       break;
-            
-          //     default:
-          //       break;
-          //   };
-          // }, 1000);
-
-          function otvoriRezultate(){
+          setTimeout(function() {
             switch (izbor) {
               case 'brojAodg':
                 window.open("https://native.story.hr/preview/DS-quiz/odgovorA.html","_self")
@@ -149,8 +129,28 @@ if (document.querySelector('#submit-form')) {
             
               default:
                 break;
-            }
-          }
+            };
+          }, 1000);
+
+          // function otvoriRezultate(){
+          //   switch (izbor) {
+          //     case 'brojAodg':
+          //       window.open("https://native.story.hr/preview/DS-quiz/odgovorA.html","_self")
+          //       break;
+          //     case 'brojBodg':
+          //       window.open("https://native.story.hr/preview/DS-quiz/odgovorB.html","_self")
+          //       break;
+          //     case 'brojCodg':
+          //       window.open("https://native.story.hr/preview/DS-quiz/odgovorC.html","_self")
+          //       break;
+          //     case 'brojDodg':
+          //       window.open("https://native.story.hr/preview/DS-quiz/odgovorD.html","_self")
+          //       break;
+            
+          //     default:
+          //       break;
+          //   }
+          // }
             
       } else {
         if (izbor != 'nijedan') {
