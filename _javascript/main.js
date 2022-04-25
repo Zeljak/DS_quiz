@@ -83,24 +83,82 @@ if (document.querySelector('#submit-form')) {
     if (izbor == 'nijedan') {
       document.querySelector('.error__message').classList.remove('is-hidden');
     } else {
-      switch (izbor) {
-        case 'brojAodg':
-          window.open("http://localhost:8848/odgovorA.html","_self")
-          break;
-        case 'brojBodg':
-          window.open("http://localhost:8848/odgovorB.html","_self")
-          break;
-        case 'brojCodg':
-          window.open("http://localhost:8848/odgovorC.html","_self")
-          break;
-        case 'brojDodg':
-          window.open("http://localhost:8848/odgovorD.html","_self")
-          break;
-      
-        default:
-          break;
+      // send to table
+      // const url = 'https://script.google.com/macros/s/AKfycbyVz0-rKkFVp7WyLUufA_h7_yeRvif4d2Jiq0xo6S13D6EQmlJuVopx3ktQxqOUInYH/exec';
+      const url = 'https://script.google.com/macros/s/AKfycbxlA02HmOEZSJa3sypml5ASHJcPhbrqvpVk2WMgXWzwrdHY8aI7s8lTpy8FINW2iO3vww/exec';
+
+      if(document.getElementById('imeprezime').value !== '') {
+
+          if (izbor != 'nijedan') {
+            document.querySelector('.error__message').classList.add('is-hidden');
+          }
+
+          document.querySelector('#submit-form').classList.add('is-hidden');
+          document.querySelector('.error__message_ime').classList.add('is-hidden');
+
+          fetch(url,{
+            method: 'POST',
+            mode: 'no-cors',
+            cache: 'no-cache',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            body: $('form#kviz').serializeJSON()
+          })
+            // .then(document.querySelector('.loading-indicator-moda').classList.add('is-hidden'))
+            .then(document.querySelector('.error__message_ime').classList.add('is-hidden'))
+            .then(otvoriRezultate());
+
+          // open result page
+          // setTimeout(function() {
+          //   switch (izbor) {
+          //     case 'brojAodg':
+          //       window.open("http://localhost:8848/odgovorA.html","_self")
+          //       break;
+          //     case 'brojBodg':
+          //       window.open("http://localhost:8848/odgovorB.html","_self")
+          //       break;
+          //     case 'brojCodg':
+          //       window.open("http://localhost:8848/odgovorC.html","_self")
+          //       break;
+          //     case 'brojDodg':
+          //       window.open("http://localhost:8848/odgovorD.html","_self")
+          //       break;
+            
+          //     default:
+          //       break;
+          //   };
+          // }, 1000);
+
+          function otvoriRezultate(){
+            switch (izbor) {
+              case 'brojAodg':
+                window.open("https://native.story.hr/preview/DS-quiz/odgovorA.html","_self")
+                break;
+              case 'brojBodg':
+                window.open("https://native.story.hr/preview/DS-quiz/odgovorB.html","_self")
+                break;
+              case 'brojCodg':
+                window.open("https://native.story.hr/preview/DS-quiz/odgovorC.html","_self")
+                break;
+              case 'brojDodg':
+                window.open("https://native.story.hr/preview/DS-quiz/odgovorD.html","_self")
+                break;
+            
+              default:
+                break;
+            }
+          }
+            
+      } else {
+        if (izbor != 'nijedan') {
+          document.querySelector('.error__message').classList.add('is-hidden');
+        }
+
+        document.querySelector('.error__message_ime').classList.remove('is-hidden');
       }
-      // console.log(brojAodg, brojBodg, brojCodg, brojDodg, najviseOdg, izbor);
     }
   });
 }
