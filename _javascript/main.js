@@ -135,16 +135,16 @@ if (document.querySelector('#submit-form')) {
           function otvoriRezultate(){
             switch (izbor) {
               case 'brojAodg':
-                window.open("http://localhost:8848/odgovorA.html","_self")
+                window.open("https://native.story.hr/preview/DS-quiz/odgovorA.html","_self")
                 break;
               case 'brojBodg':
-                window.open("http://localhost:8848/odgovorB.html","_self")
+                window.open("https://native.story.hr/preview/DS-quiz/odgovorB.html","_self")
                 break;
               case 'brojCodg':
-                window.open("http://localhost:8848/odgovorC.html","_self")
+                window.open("https://native.story.hr/preview/DS-quiz/odgovorC.html","_self")
                 break;
               case 'brojDodg':
-                window.open("http://localhost:8848/odgovorD.html","_self")
+                window.open("https://native.story.hr/preview/DS-quiz/odgovorD.html","_self")
                 break;
             
               default:
